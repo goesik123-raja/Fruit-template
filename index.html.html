@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "poppins", sans-serif;
+    }
+
+    /* nav table */
+    .nav-table {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 50px;
+        background-color: greenyellow;
+        gap: 10px;
+        margin-left: 50px;
+        align-items: center;
+        border-radius: 5px 30px 20px 30px;
+        margin-top: 10px;
+        color: black;
+        font-weight: 600;
+    }
+
+    .nav-table i {
+        color: red;
+    }
+
+    .nav-table .address {
+        padding-left: 10px;
+        padding-bottom: 20px;
+    }
+
+    .nav-table .policy {
+        padding-bottom: 20px;
+        padding-right: 15px;
+    }
+
+    /* navbar */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    nav h1 {
+        color: red;
+        font-size: 30px;
+    }
+
+    nav h1:hover {
+
+        color: limegreen;
+    }
+
+    .nav-links ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+    }
+
+    .nav-links ul a {
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        padding: 5px;
+    }
+
+    .nav-links ul a:hover {
+        /* color: yellowgreen; */
+        color: #ff9800;
+        /* text-decoration: underline; */
+    }
+
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        bottom: -2px;
+        width: 0%;
+        height: 2px;
+        background-color: #ff9800;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    .nav-icon {
+        font-size: 25px;
+        margin-right: 40px;
+        color: black;
+        padding: 20px;
+    }
+
+    .nav-icon i:hover {
+        color: orange;
+    }
+
+    /* main page */
+    .main {
+        background-image: url(index.html/hero-img.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+    }
+
+    /* .img
+   {
+     margin-left: 250px;
+   } */
+    .content .h {
+        font-size: 40px;
+        color: orange;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: space-between;
+        width: 370px;
+        height: 40px;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 30px;
+        border-color: #ff9800;
+        padding-left: 20px;
+        font-size: 17px;
+    }
+
+    .btn div {
+        justify-content: flex-end;
+        background-color: rgb(128, 186, 11);
+        height: 36px;
+        width: 98px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 490;
+        border-radius: 30px;
+        padding-top: 10px;
+    }
+
+    .btn div:hover {
+        background-color: #ff9800;
+        color: #fff;
+    }
+
+    /* icon section */
+    .main-icon {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 70px 50px;
+    }
+
+    .one {
+        width: 80px;
+        height: 60px;
+        background-color: rgb(248, 204, 6);
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 30px;
+        margin-left: 70px;
+    }
+
+    .icon {
+        border: 2px solid transparent;
+        border-radius: 5px;
+        box-shadow: 5px;
+        margin: 10px;
+        width: 20%;
+        height: 250px;
+        padding: 20px;
+        background-color: rgb(245, 240, 240);
+    }
+
+    .icon h4,
+    p {
+        padding-top: 20px;
+    }
+
+    /* organic food */
+    .organic-food {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px;
+    }
+
+    .button button {
+        padding: 5px;
+        border: 2px solid transparent;
+        border-radius: 30px;
+        text-align: center;
+        font-size: 16px;
+        justify-content: space-between;
+        width: 150px;
+    }
+
+    .all {
+        background-color: rgb(248, 204, 6);
+        color: #fff;
+    }
+
+    /* organic food gallery */
+    .gallery {
+        display: flex;
+        justify-content: space-evenly;
+        column-gap: 5px;
+        margin: 30px;
+        flex-wrap: wrap;
+        min-height: 25%;
+        margin-top: 70px;
+    }
+
+    .gallery .card {
+        border: 2px solid rgb(128, 186, 11);
+        text-align: center;
+        border-radius: 5px;
+        width: 20%;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+
+    .card .img {
+        background-position: center;
+        background-size: cover;
+        min-height: 250px;
+    }
+
+    .card .img-1 {
+        background-image: url(index.html/vegetable-item-6.jpg);
+    }
+
+    .card .img-2 {
+        background-image: url(index.html/fruite-item-1.jpg);
+    }
+
+    .card .img-3 {
+        background-image: url(index.html/fruite-item-2.jpg);
+    }
+
+    .card .img-4 {
+        background-image: url(index.html/fruite-item-3.jpg);
+    }
+
+    .card .img-5 {
+        background-image: url(index.html/fruite-item-4.jpg);
+    }
+
+    .card .img-6 {
+        background-image: url(index.html/fruite-item-5.jpg);
+    }
+
+    .card .img-7 {
+        background-image: url(index.html/fruite-item-6.jpg);
+    }
+
+    .card .img-8 {
+        background-image: url(index.html/fruite-item-2.jpg);
+    }
+
+    .text {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 5px;
+        margin-left: 30px;
+        border-radius: 20px;
+        font-size: 16px;
+        color: rgb(128, 186, 11);
+        background-color: #fff;
+        border: 2px solid rgb(128, 186, 11);
+    }
+
+    .img .top {
+        font-size: 16px;
+        width: 80px;
+        border-radius: 15px;
+        padding: 3px;
+        margin: 5px;
+        background-color: rgb(248, 204, 6);
+        color: #fff;
+        border: transparent;
+        margin-left: -150px;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+        box-shadow: 30px;
+
+    }
+
+    .text button:hover {
+        color: white;
+        background-color: #ff9800;
+    }
+
+    /* feature product */
+    .posi {
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        column-gap: 5px;
+        margin: 100px 50px;
+    }
+
+    .box {
+        border: 3px solid rgb(128, 186, 11);
+        position: relative;
+        border-radius: 10px;
+    }
+
+    .box-1 {
+        border: 3px solid grey;
+    }
+
+    .box-2 {
+        border: 3px solid lightgreen;
+    }
+
+    .off {
+        text-align: center;
+        background-color: rgb(248, 204, 6);
+        width: 50%;
+        height: 100px;
+        position: absolute;
+        bottom: 50px;
+        left: 90px;
+        border-radius: 10px;
+    }
+
+    .off-1 {
+        background-color: gray;
+    }
+
+    .off-2 {
+        background-color: lightgreen;
+    }
+
+    .posi img {
+        height: 300px;
+        width: 100%;
+    }
+
+    .color {
+        height: 100px;
+        background-color: rgb(141, 206, 10);
+    }
+
+    .color-1 {
+        background-color: rgb(6, 42, 42);
+    }
+
+    .color-2 {
+        background-color: rgb(37, 218, 70);
+    }
+
+    .off p {
+        color: #fff;
+    }
+
+    /* organic vegtables */
+    .fresh-head {
+        margin-left: 30px;
+    }
+
+    .arrow {
+        margin-right: 80px;
+        height: 20px;
+        text-align: end;
+    }
+
+    .arrow i {
+        height: 40px;
+        width: 100px;
+        font-size: 30px;
+        text-align: center;
+        padding: 5px;
+        background-color: #fff;
+        color: rgb(248, 204, 6);
+        border: 2px solid rgb(248, 204, 6);
+        border-radius: 20px;
+        margin-left: 5px;
+    }
+
+    .arrow i:hover {
+        color: #fff;
+        background-color: rgb(248, 204, 6);
+    }
+
+    .img .left {
+        margin-top: 10px;
+        margin-left: 150px;
+        width: 90px;
+    }
+
+    .card .veg-1 {
+        background-image: url(index.html/vegetable-item-1.jpg);
+    }
+
+    .crad .veg-2 {
+        background-image: url(index.html/vegetable-item-2.jpg);
+    }
+
+    .card .veg-3 {
+        background-image: url(index.html/vegetable-item-3.png);
+    }
+
+    .card .veg-4 {
+        background-image: url(index.html/vegetable-item-4.jpg);
+    }
+
+    /* fresh eotic fruits */
+    .back {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(240, 177, 18);
+        padding: 20px;
+        margin-top: 40px;
+        margin: 0%;
+        /* color: aqua; */
+    }
+
+    .back .part-1 {
+        padding: 50px;
+        font-size: 30px;
+        /* color: aqua; */
+        /* border-color: 2px solid black; */
+    }
+
+    .part-1 h2 {
+        color: cornflowerblue;
+    }
+
+    .part-1 button {
+        background-color: transparent;
+        border: 1px solid rgb(128, 186, 11);
+        background-color: lightslategray;
+        width: 150px;
+        border-radius: 30px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .back h1 {
+        color: black;
+    }
+
+    /* .back h1
+    {
+        color: #fff;
+    } */
+    .back button:hover {
+        background-color: rgb(128, 186, 11);
+    }
+
+    .rup {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        border: 2px solid;
+        border-radius: 80px;
+        width: 130px;
+        height: 97px;
+        position: absolute;
+        right: 500px;
+        background-color: #fff;
+    }
+
+    .one-1 {
+        font-size: 50px;
+        padding: 20px;
+    }
+
+    .amount {
+        font-size: medium;
+        padding-top: 15px;
+    }
+
+    .img .top-left {
+        font-size: 16px;
+        width: 80px;
+        height: 35px;
+        border-radius: 15px;
+        padding: 3px;
+        margin: 5px;
+        background-color: rgb(128, 186, 11);
+        color: #fff;
+        border: transparent;
+        margin-right: -150px;
+    }
+
+    /* best products */
+    .center {
+        text-align: center;
+        color: rgb(141, 206, 10);
+        margin-top: 50px;
+        font-size: 50px;
+    }
+
+    .center-1 {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+    .seller {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        margin-left: 20px;
+    }
+
+    .product {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        padding: 3px;
+        border: 2px solid black;
+        background-color: aliceblue;
+        border-radius: 10px;
+        width: 30%;
+    }
+
+    .orange img {
+        height: 200px;
+        border-radius: 150px;
+    }
+
+    .doller {
+        margin: 10px;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .doller button {
+        margin-top: 10px;
+        margin-left: -10px;
+    }
+
+    .seller button:hover {
+        background-color: dimgray;
+        color: #ff9800;
+    }
+
+    .seller-1 {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        margin-left: 75px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        /* background-color: dimgray;
+        color: #ff9800; */
+    }
+
+    .seller-1 button:hover {
+        background-color: dimgray;
+        color: yellow;
+    }
+
+    /* .product
+    {
+       border-color: 2px solid  black; 
+    } */
+    .product-1 {
+        height: 100%;
+        padding: 3px;
+        border-radius: 10px;
+        width: 30%;
+        /* border-color: 2px solid  black; */
+    }
+
+    .orange-1 img {
+        height: 200px;
+        width: 300px;
+        border-radius: 15px;
+    }
+
+    .doller-1 {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* profile */
+    .profile {
+        display: flex;
+        width: 80%;
+        justify-content: space-evenly;
+        background-color: rgb(212, 216, 221);
+        text-align: center;
+        margin: 70px;
+        margin-left: 130px;
+    }
+
+    .pro {
+        background-color: rgb(146, 238, 146);
+        gap: 10px;
+        border: 1px solid transparent;
+        margin: 20px;
+        width: 20%;
+    }
+
+    .pro p,
+    h2 {
+        color: purple;
+    }
+
+    .pro p {
+        font-size: 40px;
+    }
+
+    /* testimonial */
+    .our-1 {
+        text-align: center;
+        font-size: 25px;
+        color: rgb(68, 253, 27);
+    }
+
+    .our-2 {
+        text-align: center;
+    }
+
+    .our-2 h1 {
+        font-size: 50px;
+
+    }
+
+    .testimonial {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .client {
+        width: 45%;
+        margin-top: 50px;
+        background-color: lightgray;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .client-img {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px;
+        margin-right: 120px;
+    }
+
+    .client-content {
+        margin-left: -90px;
+        padding: 5px;
+    }
+
+
+    .quotes {
+        font-size: 40px;
+        margin-top: 50px;
+        margin-right: -150px;
+        color: indigo;
+    }
+
+    .footer-main {
+        display: flex;
+        padding-top: 70px;
+        background-color: gray;
+        justify-content: space-evenly;
+    }
+
+    .footer-head {
+        padding-right: 170px;
+    }
+
+    .footer-head h1 {
+        color: indigo;
+        font-size: 55px;
+        font-weight: 20;
+    }
+
+    .footer-head h5 {
+        color: black;
+        font-size: 20px;
+        font-weight: 10PX;
+    }
+
+    .search {
+        margin: 10px;
+    }
+
+    .footer-icon {
+        margin-top: 10px;
+        font-size: 30px;
+        color: orangered;
+    }
+
+    .footer-main-1 {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 15px;
+    }
+
+    .footer-mainn h2 {
+        color: blue;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+
+    .footer-1 {
+        padding-top: 10px;
+    }
+
+    .footer-2 {
+        padding-top: 10px;
+    }
+
+    .footer-3 {
+        padding-top: 10px;
+
+    }
+
+    .footer-4 {
+        padding-top: 10px;
+    }
+
+    .btn-1 {
+        background-color: black;
+        color: wheat;
+        border-radius: 40px;
+        border-color: darkcyan;
+        width: 120px;
+        height: 49px;
+        font-size: 16px;
+        font-weight: 90px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="nav-table">
+        <div class="address">
+            <p><i class="fa-solid fa-location-dot"></i>4 Parkers house,48 regent street uk <i
+                    class="fa-solid fa-envelope"></i>Gowsik123@gamil.com</p>
+        </div>
+        <div class="policy">
+            <p>Privacy Policy/Terms of use/Sales and Refunds</p>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <nav>
+        <div class="logo">
+            <h1>fruitables</h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">Shop details</a></li>
+                <li><a href="">Pages</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+    </nav>
+
+    <!-- main page -->
+    <div class="main">
+        <div class="content">
+            <p class="h">100% organic foods</p>
+            <h1 class="h1">orgainc veggies & <br>furits foods</h1><br><br>
+            <button class="btn">search<div>submit now</div></button>
+        </div>
+
+        <div class="img">
+            <img src="index.html/hero-img-1.png" alt="">
+        </div>
+    </div>
+
+    <!-- icon secyion -->
+    <div class="main-icon">
+
+        <div class="icon">
+            <div class="one"><i class="fa-solid fa-bag-shopping"></i></div>
+            <h4>free shopping</h4>
+            <p>free on order over$200</p>
+        </div>
+
+
+        <div class="icon">
+            <div class="one"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>Security payment</h4>
+            <p>100% Security payment</p>
+        </div>
+
+        <div class="icon">
+            <div class="one"><i class="fa-solid fa-arrow-right-arrow-left"></i></i></div>
+            <h4>20 days return</h4>
+            <p>15 day money gurantee</p>
+        </div>
+
+        <div class="icon">
+            <div class="one"><i class="fa-solid fa-phone"></i></div>
+            <h4>24/7 support</h4>
+            <p>Fast And focus</p>
+        </div>
+    </div>
+
+    <!-- organic good head -->
+
+    <div class="organic-food">
+        <div class="our">
+            <h1>our orgainc products</h1>
+        </div>
+        <div class="button">
+            <button class="all">All PRODUCTS</button>
+            <button>Vegtables</button>
+            <button>Furits</button>
+            <button>Bread</button>
+            <button>Meat</button>
+        </div>
+    </div>
+
+    <!-- organic food gallery -->
+
+    <div class="gallery">
+
+        <div class="card">
+            <div class="img img-1">
+                <button class="top">furits</button>
+            </div>
+            <div class="text">
+                <h3>grapes</h3>
+                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint consequuntur deleniti fuga impedit illo molestias iusto aperiam quaerat, possimus natus blanditiis, eum voluptas asperiores nemo atque laborum libero. Accusamus, laudantium?</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img img-2">
+                <button class="top">furits</button>
+            </div>
+            <div class="text">
+                <h3>grapes</h3>
+                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint consequuntur deleniti fuga impedit illo molestias iusto aperiam quaerat, possimus natus blanditiis, eum voluptas asperiores nemo atque laborum libero. Accusamus, laudantium?</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img img-3">
+                <button class="top">furits</button>
+            </div>
+            <div class="text">
+                <h3>grapes</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non pariatur est .</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img img-4">
+                <button class="top">furits</button>
+            </div>
+            <div class="text">
+                <h3>grapes</h3>
+                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint consequuntur deleniti fuga impedit illo molestias iusto aperiam quaerat, possimus natus blanditiis, eum voluptas asperiores nemo atque laborum libero. Accusamus, laudantium?</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img img-5">
+                <button class="top">furits</button>
+            </div>
+            <div class="text">
+                <h3>grapes</h3>
+                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint consequuntur deleniti fuga impedit illo molestias iusto aperiam quaerat, possimus natus blanditiis, eum voluptas asperiores nemo atque laborum libero. Accusamus, laudantium?</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img img-6">
+                <button class="top">furits</button>
+            </div>
+            <div class="text">
+                <h3>grapes</h3>
+                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint consequuntur deleniti fuga impedit illo molestias iusto aperiam quaerat, possimus natus blanditiis, eum voluptas asperiores nemo atque laborum libero. Accusamus, laudantium?</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img img-7">
+                <button class="top">furits</button>
+            </div>
+            <div class="text">
+                <h3>grapes</h3>
+                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint consequuntur deleniti fuga impedit illo molestias iusto aperiam quaerat, possimus natus blanditiis, eum voluptas asperiores nemo atque laborum libero. Accusamus, laudantium?</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img img-8">
+                <button class="top">furits</button>
+            </div>
+            <div class="text">
+                <h3>grapes</h3>
+                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint consequuntur deleniti fuga impedit illo molestias iusto aperiam quaerat, possimus natus blanditiis, eum voluptas asperiores nemo atque laborum libero. Accusamus, laudantium?</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- position -->
+    <div class="posi">
+        <div class="box">
+            <img src="index.html/featur-1.jpg" alt="">
+            <div class="color">
+            </div>
+            <div class="off">
+                <p>fresh apples</p>
+                <h4>20%off</h4>
+            </div>
+        </div>
+
+        <div class="box box-1">
+            <img src="index.html/featur-2.jpg" alt="">
+            <div class="color color-1">
+            </div>
+            <div class="off off-1">
+                <p>tasty furits</p>
+                <h4>free delivary</h4>
+            </div>
+        </div>
+
+        <div class="box box-2">
+            <img src="index.html/featur-3.jpg" alt="">
+            <div class="color color-2">
+            </div>
+            <div class="off off-2">
+                <p>exotic vegtables</p>
+                <h4>discount 30$</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- fresh vegtable -->
+    <h1 class="fresh-head">fresh organic vegtables</h1>
+    <p class="arrow">
+        <i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-arrow-left"></i>
+    </p>
+
+    <div class="gallery">
+        <div class="card">
+            <div class="img img-1 veg-1">
+                <button class="top left">vegtables</button>
+            </div>
+            <div class="text">
+                <h3>potatoes</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dignissimos sit rerum doloremque molestiae eligendi aliquam? Minus dolor voluptate odit consequuntur rem fugiat quo, officiis eius ea, excepturi consectetur incidunt!</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img img-1 veg-2">
+                <button class="top left">vegtables</button>
+            </div>
+            <div class="text">
+                <h3>parsely</h3>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores officia in veniam aspernatur accusamus omnis dolorem molestiae, excepturi exercitationem voluptates tempora nobis est maxime illo explicabo vitae? Vitae, enim asperiores.</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img img-1 veg-3">
+                <button class="top left">vegtables</button>
+            </div>
+            <div class="text">
+                <h3>potatoes</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quos repudiandae optio tempora, et animi asperiores obcaecati atque facilis vitae tempore sit temporibus eos. Ducimus, minus? Itaque modi neque libero.</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img img-1 veg-4">
+                <button class="top left">vegtables</button>
+            </div>
+            <div class="text">
+                <h3>parsely</h3>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus placeat mollitia at repellat rem. Facilis, consequuntur, dolorem quia est, sequi a cum nulla et voluptas illum accusamus maxime illo itaque.</p> -->
+                <p>$4.99/kg <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button></p>
+            </div>
+        </div>
+
+        <!-- fresh eotic frutis -->
+
+        <div class="back">
+            <div class="part-1">
+                <h1>fresh exotic frutis</h1>
+                <h2>in our store</h2>
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, sed debitis amet quaerat impedit accusantium eveniet deserunt earum molestiae minus, sequi dolor error, ipsa saepe. Ipsam sed aliquam numquam iure.</p> -->
+                <button>buy</button>
+            </div>
+            <div class="part-2">
+                <img src="index.html/baner-1.png" alt="">
+            </div>
+            <div class="rup">
+                <div class="one-1">1</div>
+                <div class="amount">
+                    <p>50$ <br>kg</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- best seller -->
+    <h1 class="center">Bestseller products</h1>
+    <p class="center-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>At iure neque vel assumenda
+        eligendi dolore doloremque minima libero, <br>quae optio placeat eum dignissimos itaque praesentium, quidem,
+        natus veritatis. Beatae, ab.</p>
+
+    <div class="seller">
+
+        <div class="product">
+            <div class="orange">
+                <img src="index.html/best-product-1.jpg" alt="">
+            </div>
+            <div class="doller">
+                <p>organic tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="orange">
+                <img src="index.html/best-product-2.jpg" alt="">
+            </div>
+            <div class="doller">
+                <p>organic tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to card</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="orange">
+                <img src="index.html/best-product-3.jpg" alt="">
+            </div>
+            <div class="doller">
+                <p>organic tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="orange">
+                <img src="index.html/best-product-4.jpg" alt="">
+            </div>
+            <div class="doller">
+                <p>organic tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="orange">
+                <img src="index.html/best-product-5.jpg" alt="">
+            </div>
+            <div class="doller">
+                <p>orgainc tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to cart</button>
+            </div>
+        </div>
+        <div class="product">
+            <div class="orange">
+                <img src="index.html/best-product-6.jpg" alt="">
+            </div>
+            <div class="doller">
+                <p>orgainc tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="seller-1">
+        <div class="product-1">
+            <div class="orange-1">
+                <img src="index.html/best-product-1.jpg" alt="">
+            </div>
+            <div class="doller-1">
+                <p>orgainc tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to cart</button>
+            </div>
+        </div>
+        <div class="product-1">
+            <div class="orange-1">
+                <img src="index.html/best-product-5.jpg" alt="">
+            </div>
+            <div class="doller-1">
+                <p>orgainc tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to cart</button>
+            </div>
+        </div>
+        <div class="product-1">
+            <div class="orange-1">
+                <img src="index.html/best-product-4.jpg" alt="">
+            </div>
+            <div class="doller-1">
+                <p>orgainc tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to cart</button>
+            </div>
+        </div>
+        <div class="product-1">
+            <div class="orange-1">
+                <img src="index.html/best-product-6.jpg" alt="">
+            </div>
+            <div class="doller-1">
+                <p>orgainc tomoto</p>
+                <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+                <p>3.12$</p>
+                <button class="card"><i class="fa-solid fa-bag-shopping"></i>add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- profile -->
+
+    <div class="profile">
+        <div class="pro">
+            <p><i class="fa-solid fa-users"></i></p>
+            <h3>SATISFIED <br> CUSTOMERS</h3>
+            <h2>1963</h2>
+        </div>
+
+        <div class="pro">
+            <p><i class="fa-solid fa-users"></i></p>
+            <h3>QUALITY OF <br>SERVICE</h3>
+            <h2>99%</h2>
+        </div>
+
+        <div class="pro">
+            <p><i class="fa-solid fa-users"></i></p>
+            <h3>QUALITY <br>CERTIFICATES</h3>
+            <h2>33</h2>
+        </div>
+
+        <div class="pro">
+            <p><i class="fa-solid fa-users"></i></p>
+            <h3>AVAILABLE <br>PRODUCTS</h3>
+            <h2>786</h2>
+        </div>
+    </div>
+
+    <!-- our testimonial -->
+
+    <h3 class="our-1">Our Testimonial</h3><br>
+    <h1 class="our-2">Our Client saying !</h1>
+    <p class="arrow"> 
+        <i class="fa-solid fa-arrow-right"></i>
+        <i class="fa-solid fa-arrow-left"></i>
+    </p>
+
+    <div class="testimonial">
+        <div class="client">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, harum quod natus aspernatur in veritatis
+            quisquam obcaecati, exercitationem hic laboriosam ducimus. Sint fuga accusamus et officia nemo! Ea, ut
+            similique?
+            <hr>
+            <div class="client-img">
+                <img src="index.html/testimonial-1.jpg" alt="">
+                <div class="client-content">
+                    <h5>Nivetha</h5>
+                    <h5>Profession</h5>
+                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></p>
+                </div>
+              
+
+            </div>
+        </div>
+        <div class="client">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi architecto repudiandae explicabo provident
+            aspernatur expedita dolore et necessitatibus. Illo voluptatem corporis reprehenderit iure natus alias
+            quibusdam corrupti maxime soluta numquam?
+            <hr>
+            <div class="client-img">
+
+                <img src="index.html/testimonial-1.jpg" alt="">
+                <div class="client-content">
+                    <h5>nivetha</h5>
+                    <h5>profession</h5>
+                    <p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-main">
+            <div class="footer-head">
+                <h1>Fruitables</h1>
+                <h5>Fresh prouduct</h5>
+            </div>
+            <div class="search">
+                <button class="btn">search<div>submit now</div></button>
+            </div>
+            <div class="footer-icons">
+                <i class="fa-brand fa-twitter"></i>
+                <i class="fa-brand fa-facebook"></i>
+                <i class="fa-brand fa-youtube"></i>
+                <i class="fa-brand fa-instagram"></i>
+                <i class="fa-brand fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="footer-1">
+                <h2>Why people link as</h2>
+                <p>Typesetting,remaining essentially unchanged</p>
+                <p>IT was poopularised in the </p>
+                <p>1960s with the like aldus pagemaker</p>
+                <p>Including of lorem ipsum.?</p><br><br>
+                <button class="btn-1">Read more</button>
+            </div>
+            <div class="footer-2">
+                <h2>Shop info</h2>
+                <p>About us</p>
+                <p>Contact us</p>
+                <p>Privacy policy</p>
+                <p>Terms & condition</p>
+                <p>Return policy</p>
+                <p>Tag & Help</p>
+                <br>
+            </div>
+            <div class="footer-3">
+                <h2>Account</h2>
+                <p>MY account</p>
+                <p>Shop details</p>
+                <p>Shopping card</p>
+                <p>Wishlist</p>
+                <p>Order history</p>
+            </div>
+            <div class="footer-4">
+                <h2>Contact Address:</h2>
+                <p> 4 Parkers house,48 regent street uk</p>
+                <p>Email:gowsik123@gmail.com</p>
+                <p>8124674389</p>
+                <p>Payment accepted</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html
