@@ -761,6 +761,585 @@
         font-size: 16px;
         font-weight: 90px;
     }
+
+    /* responsive media query */
+    html {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        line-height: 1.5;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .nav-table,
+    nav,
+    .main,
+    .main-icon,
+    .organic-food,
+    .gallery,
+    .posi,
+    .seller,
+    .seller-1,
+    .profile,
+    .testimonial,
+    .footer-main {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main {
+        background-image: url("fruit img/hero-img.jpg");
+    }
+
+    .nav-links a {
+        position: relative;
+        display: inline-block;
+    }
+
+    .button {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .main-icon,
+    .gallery,
+    .seller,
+    .seller-1,
+    .profile,
+    .testimonial,
+    .footer-main {
+        gap: 24px;
+    }
+
+    .icon {
+        flex: 1 1 230px;
+        max-width: 280px;
+        height: auto;
+        min-height: 230px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: stretch;
+    }
+
+    .gallery>.card {
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .gallery>.card .card,
+    .seller .card,
+    .seller-1 .card {
+        width: auto;
+        margin: 8px 0 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    .img .top,
+    .img .left,
+    .img .top-left {
+        margin: 10px;
+    }
+
+    .card .veg-2 {
+        background-image: url(fruit\ img/vegetable-item-1.jpg);
+    }
+
+    .posi {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .box {
+        overflow: hidden;
+    }
+
+    .off {
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(70%, 220px);
+    }
+
+    .back {
+        grid-column: 1 / -1;
+        position: relative;
+        align-items: center;
+        gap: 24px;
+        border-radius: 8px;
+    }
+
+    .back .part-1,
+    .back .part-2 {
+        flex: 1 1 0;
+    }
+
+    .rup {
+        right: 34%;
+        top: 40px;
+    }
+
+    .seller {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 0 24px;
+        margin-left: auto;
+    }
+
+    .product {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .seller-1 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        width: min(100% - 48px, 1200px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .product-1 {
+        width: 100%;
+    }
+
+    .orange-1 img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .profile {
+        width: min(100% - 48px, 1200px);
+    }
+
+    .pro {
+        flex: 1 1 190px;
+        min-width: 180px;
+    }
+
+    .client {
+        flex: 1 1 0;
+        width: auto;
+    }
+
+    .footer-main {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .footer-main>div {
+        min-width: 0;
+    }
+
+    @media (max-width: 1200px) {
+        .nav-table,
+        nav,
+        .main,
+        .main-icon,
+        .organic-food,
+        .gallery,
+        .posi,
+        .seller,
+        .seller-1,
+        .profile,
+        .testimonial,
+        .footer-main {
+            width: calc(100% - 40px);
+        }
+
+        .gallery {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .seller-1 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 992px) {
+        .nav-table {
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 12px 16px;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .nav-table .address,
+        .nav-table .policy {
+            padding: 0;
+        }
+
+        .nav-table p {
+            padding-top: 0;
+        }
+
+        nav {
+            flex-direction: column;
+            text-align: center;
+            gap: 14px;
+        }
+
+        .nav-links ul {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links ul a {
+            font-size: 18px;
+        }
+
+        .nav-icon {
+            margin-right: 0;
+            padding: 0 0 12px;
+        }
+
+        .main {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 44px 24px;
+            text-align: center;
+        }
+
+        .main .img {
+            width: min(100%, 430px);
+        }
+
+        .content .h {
+            font-size: 34px;
+        }
+
+        .main-icon {
+            padding: 45px 0;
+        }
+
+        .one {
+            margin: 0 auto;
+        }
+
+        .organic-food {
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            text-align: center;
+        }
+
+        .button {
+            justify-content: center;
+        }
+
+        .gallery,
+        .seller,
+        .posi {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .back {
+            flex-direction: column;
+            text-align: center;
+            padding: 32px 20px;
+        }
+
+        .back .part-1 {
+            padding: 0;
+            font-size: 24px;
+        }
+
+        .rup {
+            position: static;
+            margin: 0 auto;
+        }
+
+        .profile {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .testimonial {
+            flex-direction: column;
+        }
+
+        .client {
+            width: 100%;
+        }
+
+        .footer-main {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .footer-head {
+            padding-right: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .nav-table,
+        nav,
+        .main,
+        .main-icon,
+        .organic-food,
+        .gallery,
+        .posi,
+        .seller,
+        .seller-1,
+        .profile,
+        .testimonial,
+        .footer-main {
+            width: calc(100% - 24px);
+        }
+
+        .nav-table {
+            font-size: 14px;
+        }
+
+        nav h1 {
+            font-size: 28px;
+        }
+
+        .nav-links ul {
+            gap: 4px;
+        }
+
+        .nav-links ul a {
+            font-size: 16px;
+            padding: 6px 8px;
+        }
+
+        .content .h {
+            font-size: 28px;
+        }
+
+        .h1 {
+            font-size: 30px;
+            line-height: 1.2;
+        }
+
+        .btn {
+            width: 100%;
+            max-width: 370px;
+            min-height: 42px;
+            height: auto;
+            padding-left: 16px;
+            font-size: 15px;
+        }
+
+        .btn div {
+            width: 96px;
+            min-height: 38px;
+            height: auto;
+            padding: 9px 8px;
+            font-size: 14px;
+        }
+
+        .gallery,
+        .seller,
+        .seller-1,
+        .posi {
+            grid-template-columns: 1fr;
+        }
+
+        .card .img {
+            min-height: 230px;
+        }
+
+        .card:hover {
+            transform: none;
+        }
+
+        .fresh-head,
+        .center,
+        .center-1,
+        .our-1,
+        .our-2 {
+            margin-left: 12px;
+            margin-right: 12px;
+            text-align: center;
+        }
+
+        .fresh-head {
+            font-size: 28px;
+        }
+
+        .center,
+        .our-2 {
+            font-size: 34px;
+        }
+
+        .center-1 {
+            font-size: 18px;
+        }
+
+        .arrow {
+            height: auto;
+            margin: 18px 0;
+            text-align: center;
+        }
+
+        .arrow i {
+            width: 68px;
+        }
+
+        .product {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 18px;
+        }
+
+        .orange img {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .doller {
+            text-align: center;
+        }
+
+        .doller button {
+            margin-left: 0;
+        }
+
+        .client-img {
+            flex-direction: column;
+            align-items: center;
+            margin-right: 0;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .client-content,
+        .quotes {
+            margin: 0;
+        }
+
+        .footer-head h1 {
+            font-size: 38px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .nav-table,
+        nav,
+        .main,
+        .main-icon,
+        .organic-food,
+        .gallery,
+        .posi,
+        .seller,
+        .seller-1,
+        .profile,
+        .testimonial,
+        .footer-main {
+            width: calc(100% - 20px);
+        }
+
+        .main {
+            padding: 32px 14px;
+        }
+
+        .content .h {
+            font-size: 23px;
+        }
+
+        .h1 {
+            font-size: 25px;
+        }
+
+        .button button {
+            width: 135px;
+            font-size: 14px;
+        }
+
+        .posi img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .off {
+            bottom: 30px;
+            width: 75%;
+            min-height: 86px;
+            height: auto;
+        }
+
+        .back .part-1 {
+            font-size: 20px;
+        }
+
+        .rup {
+            width: 110px;
+            height: 90px;
+            font-size: 24px;
+        }
+
+        .one-1 {
+            font-size: 42px;
+            padding: 16px 10px;
+        }
+
+        .center,
+        .our-2 {
+            font-size: 30px;
+        }
+
+        .profile {
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
+
+        .footer-main {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .nav-links ul a {
+            font-size: 14px;
+            padding: 5px;
+        }
+
+        .btn {
+            font-size: 14px;
+            padding-left: 12px;
+        }
+
+        .btn div {
+            width: 86px;
+            font-size: 12px;
+        }
+
+        .button button {
+            width: 100%;
+        }
+    }
 </style>
 </head>
 
